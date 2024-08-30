@@ -1,6 +1,6 @@
 <?php
 
-namespace Jakyeru\Larascord\Console\Commands;
+namespace Pschilly\Larascord\Console\Commands;
 
 use Illuminate\Console\Command;
 
@@ -43,7 +43,7 @@ class PublishCommand extends Command
 
         // Publish the configuration file.
         try {
-            shell_exec('php artisan vendor:publish --provider="Jakyeru\Larascord\LarascordServiceProvider" --tag=config' . ($this->option('force') ? ' --force' : ''));
+            shell_exec('php artisan vendor:publish --provider="Pschilly\Larascord\LarascordServiceProvider" --tag=config' . ($this->option('force') ? ' --force' : ''));
         } catch (\Exception $e) {
             $this->error('Could not publish the configuration file.');
             $this->error($e->getMessage());

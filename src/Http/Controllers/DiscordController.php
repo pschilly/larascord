@@ -1,13 +1,13 @@
 <?php
 
-namespace Jakyeru\Larascord\Http\Controllers;
+namespace Pschilly\Larascord\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
-use Jakyeru\Larascord\Http\Requests\StoreUserRequest;
-use Jakyeru\Larascord\Services\DiscordService;
+use Pschilly\Larascord\Http\Requests\StoreUserRequest;
+use Pschilly\Larascord\Services\DiscordService;
 
 class DiscordController extends Controller
 {

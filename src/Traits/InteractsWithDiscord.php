@@ -1,15 +1,15 @@
 <?php
 
-namespace Jakyeru\Larascord\Traits;
+namespace Pschilly\Larascord\Traits;
 
-use Jakyeru\Larascord\Models\DiscordAccessToken;
+use Pschilly\Larascord\Models\DiscordAccessToken;
 use Exception;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Http\Client\RequestException;
 use Illuminate\Support\Collection;
-use Jakyeru\Larascord\Services\DiscordService;
-use Jakyeru\Larascord\Types\AccessToken;
-use Jakyeru\Larascord\Types\GuildMember;
+use Pschilly\Larascord\Services\DiscordService;
+use Pschilly\Larascord\Types\AccessToken;
+use Pschilly\Larascord\Types\GuildMember;
 
 trait InteractsWithDiscord
 {
@@ -60,7 +60,7 @@ trait InteractsWithDiscord
     public function refreshAccessToken(): ?AccessToken
     {
         $accessToken = $this->accessToken()->first();
-        
+
         if ($accessToken) {
             try {
                 $response = (new DiscordService())->refreshAccessToken($accessToken->refresh_token);
@@ -81,8 +81,8 @@ trait InteractsWithDiscord
     }
 
     /**
-    * Get the user's Avatar url
-    */
+     * Get the user's Avatar url
+     */
     public function getAvatar(array $options = []): string
     {
         $extension = $options['extension'] ?? 'png';

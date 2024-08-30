@@ -1,14 +1,14 @@
 <?php
 
-namespace Jakyeru\Larascord\Services;
+namespace Pschilly\Larascord\Services;
 
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Client\RequestException;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Schema;
-use Jakyeru\Larascord\Types\AccessToken;
-use Jakyeru\Larascord\Types\GuildMember;
+use Pschilly\Larascord\Types\AccessToken;
+use Pschilly\Larascord\Types\GuildMember;
 
 class DiscordService
 {

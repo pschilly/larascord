@@ -1,6 +1,6 @@
 <?php
 
-namespace Jakyeru\Larascord;
+namespace Pschilly\Larascord;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -53,11 +53,11 @@ class LarascordServiceProvider extends ServiceProvider
     protected function registerConfiguration(): void
     {
         $this->publishes([
-            __DIR__.'/config/config.php' => config_path('larascord.php'),
+            __DIR__ . '/config/config.php' => config_path('larascord.php'),
         ], 'config');
 
         $this->publishes([
-            __DIR__.'/database/migrations/' => database_path('migrations'),
+            __DIR__ . '/database/migrations/' => database_path('migrations'),
         ], 'migrations');
     }
 
@@ -66,6 +66,6 @@ class LarascordServiceProvider extends ServiceProvider
      */
     protected function registerRoutes(): void
     {
-        $this->loadRoutesFrom(__DIR__.'/routes/larascord.php');
+        $this->loadRoutesFrom(__DIR__ . '/routes/larascord.php');
     }
 }

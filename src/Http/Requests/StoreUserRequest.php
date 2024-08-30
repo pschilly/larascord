@@ -1,6 +1,6 @@
 <?php
 
-namespace Jakyeru\Larascord\Http\Requests;
+namespace Pschilly\Larascord\Http\Requests;
 
 use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;

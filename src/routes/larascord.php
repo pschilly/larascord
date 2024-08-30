@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\ConfirmablePasswordController;
-use Jakyeru\Larascord\Http\Controllers\DiscordController;
+use Pschilly\Larascord\Http\Controllers\DiscordController;
 
 Route::redirect('/login', 'https://discord.com/oauth2/authorize?client_id=' . config('larascord.client_id')
     . '&redirect_uri=' . config('larascord.redirect_uri')
@@ -32,7 +32,7 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
     ->middleware(['web', 'auth'])
     ->name('logout');
 
-Route::group(['prefix' => config('larascord.route_prefix', 'larascord'), 'middleware' => ['web']], function() {
+Route::group(['prefix' => config('larascord.route_prefix', 'larascord'), 'middleware' => ['web']], function () {
     Route::get('/callback', [DiscordController::class, 'handle'])
         ->name('larascord.login');
 

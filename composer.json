@@ -1,6 +1,6 @@
 {
-    "name": "jakyeru/larascord",
-    "description": "Larascord is a package that allows you to authenticate users in your Laravel application using Discord.",
+    "name": "pschilly/larascord",
+    "description": "Larascord is a package that allows you to authenticate users in your Laravel application using Discord. This build is based on the original - but heavily modified for usage with JT-HVY website PERSCOM.",
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -14,14 +14,14 @@
     },
     "authors": [
         {
-            "name": "Jakye",
-            "email": "jakyeru@gmail.com"
+            "name": "Schilly",
+            "email": "sch1lly.live@gmail.com"
         }
     ],
     "extra": {
         "laravel": {
             "providers": [
-                "Jakyeru\\Larascord\\LarascordServiceProvider"
+                "Pschilly\\Larascord\\LarascordServiceProvider"
             ]
         }
     },

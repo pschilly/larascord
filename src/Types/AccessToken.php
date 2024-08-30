@@ -1,6 +1,6 @@
 <?php
 
-namespace Jakyeru\Larascord\Types;
+namespace Pschilly\Larascord\Types;
 
 class AccessToken
 {

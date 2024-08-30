@@ -1,6 +1,6 @@
 <?php
 
-namespace Jakyeru\Larascord\Types;
+namespace Pschilly\Larascord\Types;
 
 class GuildMember
 {
@@ -37,7 +37,8 @@ class GuildMember
     /*
      * GuildMember constructor.
      */
-    public function __construct(object $data) {
+    public function __construct(object $data)
+    {
         $this->avatar = $data->avatar;
         $this->joined_at = \Carbon\Carbon::parse($data->joined_at);
         $this->nick = $data->nick;

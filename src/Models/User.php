@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Jakyeru\Larascord\Traits\InteractsWithDiscord;
+use Pschilly\Larascord\Traits\InteractsWithDiscord;
 
 
 class User extends Authenticatable

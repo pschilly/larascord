@@ -1,6 +1,6 @@
 <?php
 
-namespace Jakyeru\Larascord\Models;
+namespace Pschilly\Larascord\Models;
 
 use Illuminate\Database\Eloquent\Model;
 

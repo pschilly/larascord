@@ -1,6 +1,6 @@
 <?php
 
-namespace Jakyeru\Larascord\Console\Commands;
+namespace Pschilly\Larascord\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
@@ -65,7 +65,12 @@ class InstallCommand extends Command
         $this->darkMode = $this->confirm('Do you want to install laravel/breeze with dark mode?', true);
 
         // Validating the user's input
-        try {$this->validateInput();} catch (\Exception $e) {$this->error($e->getMessage()); return;}
+        try {
+            $this->validateInput();
+        } catch (\Exception $e) {
+            $this->error($e->getMessage());
+            return;
+        }
 
         // Installing laravel/breeze
         $this->info('Installing Laravel Breeze...');
@@ -165,22 +170,22 @@ class InstallCommand extends Command
     protected function appendToEnvFile(): void
     {
 
-        (new Filesystem())->append('.env',PHP_EOL);
+        (new Filesystem())->append('.env', PHP_EOL);
 
-        (new Filesystem())->append('.env',PHP_EOL);
-        (new Filesystem())->append('.env','LARASCORD_CLIENT_ID='.$this->clientId);
+        (new Filesystem())->append('.env', PHP_EOL);
+        (new Filesystem())->append('.env', 'LARASCORD_CLIENT_ID=' . $this->clientId);
 
-        (new Filesystem())->append('.env',PHP_EOL);
-        (new Filesystem())->append('.env','LARASCORD_CLIENT_SECRET='.$this->clientSecret);
+        (new Filesystem())->append('.env', PHP_EOL);
+        (new Filesystem())->append('.env', 'LARASCORD_CLIENT_SECRET=' . $this->clientSecret);
 
-        (new Filesystem())->append('.env',PHP_EOL);
-        (new Filesystem())->append('.env','LARASCORD_GRANT_TYPE=authorization_code');
+        (new Filesystem())->append('.env', PHP_EOL);
+        (new Filesystem())->append('.env', 'LARASCORD_GRANT_TYPE=authorization_code');
 
-        (new Filesystem())->append('.env',PHP_EOL);
-        (new Filesystem())->append('.env','LARASCORD_PREFIX='.$this->prefix);
+        (new Filesystem())->append('.env', PHP_EOL);
+        (new Filesystem())->append('.env', 'LARASCORD_PREFIX=' . $this->prefix);
 
-        (new Filesystem())->append('.env',PHP_EOL);
-        (new Filesystem())->append('.env','LARASCORD_SCOPE=identify&email');
+        (new Filesystem())->append('.env', PHP_EOL);
+        (new Filesystem())->append('.env', 'LARASCORD_SCOPE=identify&email');
     }
 
     /**
@@ -211,9 +216,9 @@ class InstallCommand extends Command
 
         if (!$this->darkMode) {
             $this->removeDarkClasses((new Finder())
-                ->in(resource_path('views'))
-                ->name('*.blade.php')
-                ->notName('welcome.blade.php')
+                    ->in(resource_path('views'))
+                    ->name('*.blade.php')
+                    ->notName('welcome.blade.php')
             );
         }
     }
