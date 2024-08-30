@@ -1,3 +1,5 @@
+# This is a fork... Specifically modified for usage for JT-HVY website PERSCOM @ https://jointtaskforceheavy.org - DO NOT USE FOR OTHER PROJECTS
+
 <p align="center">
     <a href="https://github.com/JakyeRU/Larascord" target="_blank">
         <img src="https://raw.githubusercontent.com/JakyeRU/Larascord/main/Larascord-transparent.png" height=200>
